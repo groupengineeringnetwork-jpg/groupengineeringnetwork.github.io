@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Engineering Network - Ingénierie, BTP & Études Techniques</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        engineering: {
+                            blue: '#0F2C59',
+                            lightBlue: '#1E3E62',
+                            accent: '#F39C12',
+                            dark: '#111827',
+                            gray: '#F3F4F6'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-engineering-accent selection:text-white">
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-11 h-11 bg-engineering-blue rounded-xl flex items-center justify-center text-white shadow-md group-hover:bg-engineering-accent transition-colors">
+                    <i class="fa-solid fa-helmet-safety text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-bold tracking-tight text-engineering-blue block leading-none">GEN</span>
+                    <span class="text-xs font-semibold tracking-wider text-engineering-accent uppercase">Group Engineering Network</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-sm">
+                <a href="#accueil" class="text-engineering-blue hover:text-engineering-accent transition-colors">Accueil</a>
+                <a href="#apropos" class="text-gray-600 hover:text-engineering-accent transition-colors">À propos</a>
+                <a href="#services" class="text-gray-600 hover:text-engineering-accent transition-colors">Services</a>
+                <a href="#projets" class="text-gray-600 hover:text-engineering-accent transition-colors">Projets</a>
+                <a href="#contact" class="text-gray-600 hover:text-engineering-accent transition-colors">Contact</a>
+            </nav>
+
+            <!-- Call to action button -->
+            <div class="hidden lg:flex items-center space-x-4">
+                <a href="tel:+242069318801" class="flex items-center space-x-2 text-xs font-semibold text-engineering-blue bg-engineering-gray px-4 py-2.5 rounded-lg hover:bg-engineering-blue hover:text-white transition-all">
+                    <i class="fa-solid fa-phone text-engineering-accent"></i>
+                    <span>+242 06 931 88 01</span>
+                </a>
+                <a href="#contact" class="bg-engineering-accent hover:bg-amber-600 text-white font-semibold px-5 py-2.5 rounded-lg text-sm shadow-md hover:shadow-lg transition-all">
+                    Devis Gratuit
+                </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button id="menu-btn" class="md:hidden text-gray-700 hover:text-engineering-blue focus:outline-none p-2 rounded-lg">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-xl px-6 py-6 space-y-4">
+            <a href="#accueil" class="block text-engineering-blue font-medium text-base hover:text-engineering-accent">Accueil</a>
+            <a href="#apropos" class="block text-gray-700 font-medium text-base hover:text-engineering-accent">À propos</a>
+            <a href="#services" class="block text-gray-700 font-medium text-base hover:text-engineering-accent">Services</a>
+            <a href="#projets" class="block text-gray-700 font-medium text-base hover:text-engineering-accent">Projets</a>
+            <a href="#contact" class="block text-gray-700 font-medium text-base hover:text-engineering-accent">Contact</a>
+            <div class="pt-4 border-t border-gray-100 flex flex-col space-y-3">
+                <a href="tel:+242069318801" class="flex items-center justify-center space-x-2 bg-gray-100 py-3 rounded-lg text-engineering-blue font-semibold">
+                    <i class="fa-solid fa-phone text-engineering-accent"></i>
+                    <span>+242 06 931 88 01</span>
+                </a>
+                <a href="#contact" class="bg-engineering-accent text-center text-white font-semibold py-3 rounded-lg shadow">
+                    Demander un Devis
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="accueil" class="relative pt-32 pb-20 md:pt-40 md:pb-32 bg-gradient-to-br from-engineering-blue via-engineering-lightBlue to-engineering-dark text-white overflow-hidden">
+        <!-- Background Overlay Shapes -->
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#F39C12_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-engineering-accent rounded-full filter blur-3xl opacity-20"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 text-engineering-accent text-xs font-bold tracking-wide uppercase">
+                        <i class="fa-solid fa-award"></i>
+                        <span>Excellence en Ingénierie & BTP</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Construire l'avenir avec <span class="text-engineering-accent">précision</span> et <span class="text-engineering-accent">fiabilité</span>
+                    </h1>
+                    <p class="text-lg text-gray-300 max-w-2xl mx-auto lg:mx-0 font-normal">
+                        <strong>Group Engineering Network (GEN)</strong> vous accompagne dans tous vos projets de génie civil, d'études techniques, de supervision de chantier et de conseil en construction de haute qualité.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#contact" class="w-full sm:w-auto bg-engineering-accent hover:bg-amber-600 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all flex items-center justify-center space-x-3 text-base">
+                            <span>Discuter de votre projet</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#services" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold px-8 py-4 rounded-xl backdrop-blur-md transition-all text-base text-center">
+                            Découvrir nos services
+                        </a>
+                    </div>
+                    <!-- Quick stats -->
+                    <div class="grid grid-cols-3 gap-6 pt-8 border-t border-white/10 mt-10">
+                        <div>
+                            <span class="block text-3xl font-extrabold text-engineering-accent">+100</span>
+                            <span class="text-xs text-gray-300 uppercase tracking-wider">Projets réalisés</span>
+                        </div>
+                        <div>
+                            <span class="block text-3xl font-extrabold text-engineering-accent">100%</span>
+                            <span class="text-xs text-gray-300 uppercase tracking-wider">Expertise technique</span>
+                        </div>
+                        <div>
+                            <span class="block text-3xl font-extrabold text-engineering-accent">24/7</span>
+                            <span class="text-xs text-gray-300 uppercase tracking-wider">Support client</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10">
+                            <img src="https://images.unsplash.com/photo-1541888946425-d0fbb18f764c?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Ingénierie BTP" 
+                                 class="w-full h-[450px] object-cover hover:scale-105 transition-transform duration-700"
+                                 onerror="this.src='https://placehold.co/600x450/0F2C59/FFFFFF?text=Group+Engineering+Network'">
+                        </div>
+                        <!-- Floating Badge -->
+                        <div class="absolute -bottom-6 -left-6 bg-white text-engineering-blue p-5 rounded-2xl shadow-xl flex items-center space-x-4 border border-gray-100">
+                            <div class="w-12 h-12 bg-engineering-accent/10 rounded-xl flex items-center justify-center text-engineering-accent text-2xl font-bold">
+                                <i class="fa-solid fa-gears"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm">Normes Internationales</h4>
+                                <p class="text-xs text-gray-500">Qualité & Sécurité garanties</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="apropos" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- About Images grid -->
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=500&q=80" 
+                             alt="Études techniques" 
+                             class="rounded-2xl shadow-lg w-full h-56 object-cover"
+                             onerror="this.src='https://placehold.co/400x300/1E3E62/FFFFFF?text=Etudes+Techniques'">
+                        <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=500&q=80" 
+                             alt="Ingénieur en action" 
+                             class="rounded-2xl shadow-lg w-full h-72 object-cover"
+                             onerror="this.src='https://placehold.co/400x400/F39C12/FFFFFF?text=Ingenierie'">
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=500&q=80" 
+                             alt="Chantier de construction" 
+                             class="rounded-2xl shadow-lg w-full h-72 object-cover"
+                             onerror="this.src='https://placehold.co/400x400/0F2C59/FFFFFF?text=Chantier'">
+                        <div class="bg-engineering-blue p-6 rounded-2xl text-white shadow-lg flex flex-col justify-center items-center text-center">
+                            <i class="fa-solid fa-shield-halved text-engineering-accent text-3xl mb-2"></i>
+                            <h4 class="font-bold text-lg">Fiabilité & Rigueur</h4>
+                            <p class="text-xs text-gray-300 mt-1">Votre partenaire de confiance pour chaque ouvrage.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Text -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center space-x-2 bg-engineering-accent/10 px-4 py-1.5 rounded-full text-engineering-accent text-xs font-bold tracking-wide uppercase">
+                        <span>À propos de nous</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-engineering-blue tracking-tight">
+                        L'excellence au service de vos infrastructures
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed text-base">
+                        <strong>Group Engineering Network (GEN)</strong> est un cabinet d'ingénierie et de réalisation de premier plan, spécialisé dans le génie civil, la conception architecturale, l'étude technique approfondie et la conduite de travaux de construction.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed text-base">
+                        Forts d'une équipe d'ingénieurs et d'experts passionnés, nous transformons vos visions en infrastructures durables, sécurisées et économiquement optimisées, en respectant scrupuleusement les délais et les standards internationaux de qualité.
+                    </p>
+
+                    <!-- Key features list -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 rounded-lg bg-engineering-accent/10 flex items-center justify-center text-engineering-accent shrink-0 mt-1">
+                                <i class="fa-solid fa-check text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-engineering-blue text-sm">Expertise Multidisciplinaire</h4>
+                                <p class="text-xs text-gray-500">Compétences globales en BTP et conseil.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 rounded-lg bg-engineering-accent/10 flex items-center justify-center text-engineering-accent shrink-0 mt-1">
+                                <i class="fa-solid fa-check text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-engineering-blue text-sm">Innovation & Sécurité</h4>
+                                <p class="text-xs text-gray-500">Techniques modernes et respect des normes.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 rounded-lg bg-engineering-accent/10 flex items-center justify-center text-engineering-accent shrink-0 mt-1">
+                                <i class="fa-solid fa-check text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-engineering-blue text-sm">Respect des Délais</h4>
+                                <p class="text-xs text-gray-500">Planification rigoureuse et suivi actif.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 rounded-lg bg-engineering-accent/10 flex items-center justify-center text-engineering-accent shrink-0 mt-1">
+                                <i class="fa-solid fa-check text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-engineering-blue text-sm">Accompagnement Sur-Mesure</h4>
+                                <p class="text-xs text-gray-500">Conseil personnalisé de l'idée à la livraison.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-engineering-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <div class="inline-flex items-center space-x-2 bg-engineering-blue/10 px-4 py-1.5 rounded-full text-engineering-blue text-xs font-bold tracking-wide uppercase">
+                    <span>Nos Prestations</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-engineering-blue tracking-tight">
+                    Des solutions d'ingénierie complètes pour vos projets
+                </h2>
+                <p class="text-gray-600 text-base">
+                    Nous mettons à votre disposition notre savoir-faire technique pour garantir la réussite, la durabilité et la rentabilité de vos investissements en construction.
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-engineering-blue text-white rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-engineering-accent transition-colors shadow-md">
+                            <i class="fa-solid fa-building-shield"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-engineering-blue mb-3">Ingénierie & Génie Civil</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Conception structurelle, dimensionnement des ouvrages d'art, bâtiments industriels et résidentiels conformes aux standards internationaux.
+                        </p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center space-x-2 text-engineering-blue font-semibold text-sm group-hover:text-engineering-accent transition-colors">
+                        <span>En savoir plus</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-engineering-blue text-white rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-engineering-accent transition-colors shadow-md">
+                            <i class="fa-solid fa-compass-drafting"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-engineering-blue mb-3">Études Techniques</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Études de sols, notes de calculs, modélisation 3D, plans d'exécutions précis et optimisation budgétaire de vos projets.
+                        </p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center space-x-2 text-engineering-blue font-semibold text-sm group-hover:text-engineering-accent transition-colors">
+                        <span>En savoir plus</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-engineering-blue text-white rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-engineering-accent transition-colors shadow-md">
+                            <i class="fa-solid fa-list-check"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-engineering-blue mb-3">Suivi de Chantier</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Supervision rigoureuse des travaux, contrôle qualité des matériaux, gestion des équipes sur site et respect des délais d'exécution.
+                        </p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center space-x-2 text-engineering-blue font-semibold text-sm group-hover:text-engineering-accent transition-colors">
+                        <span>En savoir plus</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-engineering-blue text-white rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-engineering-accent transition-colors shadow-md">
+                            <i class="fa-solid fa-comments-dollar"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-engineering-blue mb-3">Conseil en Construction</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Assistance à maître d'ouvrage, audit technique, estimation financière et accompagnement juridique et réglementaire.
+                        </p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center space-x-2 text-engineering-blue font-semibold text-sm group-hover:text-engineering-accent transition-colors">
+                        <span>En savoir plus</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <div class="inline-flex items-center space-x-2 bg-engineering-accent/10 px-4 py-1.5 rounded-full text-engineering-accent text-xs font-bold tracking-wide uppercase">
+                    <span>Nos Réalisations</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-engineering-blue tracking-tight">
+                    Galerie de nos projets phares
+                </h2>
+                <p class="text-gray-600 text-base">
+                    Découvrez quelques-unes de nos réalisations qui témoignent de notre savoir-faire en ingénierie et en travaux publics et privés.
+                </p>
+            </div>
+
+            <!-- Project Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-md bg-gray-900 h-80">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=700&q=80" 
+                         alt="Immeuble Commercial" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80"
+                         onerror="this.src='https://placehold.co/600x400/0F2C59/FFFFFF?text=Immeuble+Commercial'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-6">
+                        <span class="text-engineering-accent text-xs font-bold uppercase tracking-wider mb-1">Génie Civil / Commercial</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Complexe Immobilier Moderne</h3>
+                        <p class="text-gray-300 text-xs line-clamp-2">Études techniques et supervision complète de la construction d'un immeuble à usage multiple.</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-md bg-gray-900 h-80">
+                    <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=700&q=80" 
+                         alt="Bâtiment Résidentiel" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80"
+                         onerror="this.src='https://placehold.co/600x400/1E3E62/FFFFFF?text=Batiment+Residentiel'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-6">
+                        <span class="text-engineering-accent text-xs font-bold uppercase tracking-wider mb-1">Structure & Résidentiel</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Résidences de Standing</h3>
+                        <p class="text-gray-300 text-xs line-clamp-2">Conception architecturale et calculs de structure pour un ensemble résidentiel sécurisé.</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-md bg-gray-900 h-80">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=700&q=80" 
+                         alt="Ouvrage de Génie Civil" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80"
+                         onerror="this.src='https://placehold.co/600x400/F39C12/FFFFFF?text=Ouvrage+Technique'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-6">
+                        <span class="text-engineering-accent text-xs font-bold uppercase tracking-wider mb-1">Infrastructure & Voirie</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Aménagement & Voiries</h3>
+                        <p class="text-gray-300 text-xs line-clamp-2">Études géotechniques et aménagement d'accès pour zones industrielles et urbaines.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-engineering-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <div class="inline-flex items-center space-x-2 bg-engineering-blue/10 px-4 py-1.5 rounded-full text-engineering-blue text-xs font-bold tracking-wide uppercase">
+                    <span>Contactez-nous</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-engineering-blue tracking-tight">
+                    Parlons de votre prochain projet
+                </h2>
+                <p class="text-gray-600 text-base">
+                    Notre équipe d'ingénieurs est à votre écoute pour répondre à toutes vos questions et vous accompagner dès aujourd'hui.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Contact Info Column -->
+                <div class="lg:col-span-5 space-y-8 bg-engineering-blue text-white p-8 sm:p-10 rounded-3xl shadow-xl flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Informations de Contact</h3>
+                        <p class="text-gray-300 text-sm mb-8">
+                            Contactez Group Engineering Network par téléphone ou par email pour toute demande de devis ou d'information technique.
+                        </p>
+
+                        <div class="space-y-6">
+                            <!-- Phones -->
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-engineering-accent text-xl shrink-0 mt-1">
+                                    <i class="fa-solid fa-phone-volume"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-xs text-gray-400 uppercase tracking-wider">Téléphones / WhatsApp</span>
+                                    <a href="tel:+242069318801" class="block font-semibold text-base hover:text-engineering-accent transition-colors">+242 06 931 88 01</a>
+                                    <a href="tel:+242065318801" class="block font-semibold text-base hover:text-engineering-accent transition-colors">+242 06 531 88 01</a>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-engineering-accent text-xl shrink-0 mt-1">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-xs text-gray-400 uppercase tracking-wider">Email professionnel</span>
+                                    <a href="mailto:groupengineeeringnetwork@gmail.com" class="font-semibold text-sm sm:text-base hover:text-engineering-accent transition-colors break-all">
+                                        groupengineeeringnetwork@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Office Hours -->
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-engineering-accent text-xl shrink-0 mt-1">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-xs text-gray-400 uppercase tracking-wider">Horaires d'ouverture</span>
+                                    <span class="font-semibold text-sm">Lundi - Samedi : 08h00 - 18h00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social / Brand footer inside box -->
+                    <div class="pt-8 border-t border-white/10 flex items-center justify-between">
+                        <span class="text-xs text-gray-400 uppercase font-semibold">Group Engineering Network</span>
+                        <div class="flex space-x-3">
+                            <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-engineering-accent transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-engineering-accent transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-engineering-accent transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form Column -->
+                <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl shadow-xl border border-gray-100">
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-2">Votre Nom complet</label>
+                                <input type="text" required placeholder="Ex: Jean Dupont" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-engineering-blue text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-2">Votre Téléphone</label>
+                                <input type="tel" required placeholder="Ex: +242 06..." class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-engineering-blue text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-2">Votre Email</label>
+                            <input type="email" required placeholder="Ex: jean.dupont@email.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-engineering-blue text-sm">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-2">Type de Service souhaité</label>
+                            <select class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-engineering-blue text-sm bg-white">
+                                <option>Ingénierie & Génie Civil</option>
+                                <option>Études Techniques</option>
+                                <option>Suivi de Chantier</option>
+                                <option>Conseil en Construction</option>
+                                <option>Autre demande</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-2">Votre Message / Détails du projet</label>
+                            <textarea rows="4" required placeholder="Décrivez votre projet en quelques mots..." class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-engineering-blue text-sm"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-engineering-blue hover:bg-engineering-lightBlue text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition-all flex items-center justify-center space-x-2 text-base">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Envoyer le message</span>
+                        </button>
+                    </form>
+
+                    <!-- Success Notification Box (Hidden by default) -->
+                    <div id="success-msg" class="hidden mt-6 p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-800 text-center font-medium">
+                        <i class="fa-solid fa-circle-check text-emerald-600 text-lg mr-2"></i>
+                        Merci ! Votre message a bien été envoyé à Group Engineering Network. Nous vous recontacterons dans les plus brefs délais.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-engineering-dark text-gray-400 py-16 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Col 1 -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-engineering-accent rounded-lg flex items-center justify-center text-white font-bold">
+                            <i class="fa-solid fa-helmet-safety"></i>
+                        </div>
+                        <span class="text-white font-bold text-lg tracking-tight">GEN</span>
+                    </div>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        <strong>Group Engineering Network</strong> est votre partenaire de référence en ingénierie, génie civil et suivi de projets de construction rigoureux.
+                    </p>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Liens Rapides</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#accueil" class="hover:text-engineering-accent transition-colors">Accueil</a></li>
+                        <li><a href="#apropos" class="hover:text-engineering-accent transition-colors">À propos</a></li>
+                        <li><a href="#services" class="hover:text-engineering-accent transition-colors">Services</a></li>
+                        <li><a href="#projets" class="hover:text-engineering-accent transition-colors">Projets</a></li>
+                        <li><a href="#contact" class="hover:text-engineering-accent transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Nos Domaines</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><span class="text-gray-400">Génie Civil & Bâtiment</span></li>
+                        <li><span class="text-gray-400">Études Techniques & Calculs</span></li>
+                        <li><span class="text-gray-400">Suivi & Supervision de Chantier</span></li>
+                        <li><span class="text-gray-400">Conseil & Audit en Construction</span></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Contact Direct</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="tel:+242069318801" class="hover:text-engineering-accent transition-colors">+242 06 931 88 01</a></li>
+                        <li><a href="tel:+242065318801" class="hover:text-engineering-accent transition-colors">+242 06 531 88 01</a></li>
+                        <li class="break-all"><a href="mailto:groupengineeeringnetwork@gmail.com" class="hover:text-engineering-accent transition-colors">groupengineeeringnetwork@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500">
+                <p>&copy; 2026 Group Engineering Network. Tous droits réservés.</p>
+                <div class="flex space-x-6 mt-4 sm:mt-0">
+                    <a href="#" class="hover:text-gray-400">Mentions Légales</a>
+                    <a href="#" class="hover:text-gray-400">Politique de Confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on clicking links
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Handle contact form submission
+        function handleFormSubmit(event) {
+            event.preventDefault();
